@@ -4,11 +4,8 @@
     border-color: black;
     border-width: 2px;
     border-style: inset;
-    margin-left: 90px;
-    
-
-    
-    
+    margin-left: 0px;
+    width: 100%;
 }
 td {
     padding: 20px 40px 20px
