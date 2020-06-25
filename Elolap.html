@@ -2,80 +2,94 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nem valami sej-haj</title>
-    <link rel="stylesheet" href="szerkeszto.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nem valami sej-haj</title>
+  <link rel="stylesheet" href="szerkeszto.css">
 
 </head>
 
 <body>
-    
-    <div id=nav>
-        <table id="fejlapszoveg">
-            <tr>
-                <th><a href="szabalyzat.html">Szabályzat</a></th>
 
-                <th><a href="jelentkezes.html">Jelentkezés</a></th>
+  <div id=nav>
+    <table id="navbar">
+      <tr>
+        <th><a href="szabalyzat.html">Szabályzat</a></th>
 
-                <th><a href="GYIK.html">Gyakori ismételt kérdések</a></th>
+        <th><a href="jelentkezes.html">Jelentkezés</a></th>
 
-                <th><a href="Bannoltak.html">Bannoltak</a></th>
+        <th><a href="GYIK.html">Gyakori ismételt kérdések</a></th>
 
-                <th><a href="Fórum.html">Fórum</a></th>
-            </tr>
-            <tr>
-                <td></td>
-                <td>Itt a jelentkezés.</td>
-                <td>Itt a GYIK</td>
-                <td><select id="banned" name="banned">
-                    <option value="pista">Pista</option>
-                    <option value="andris">Andris</option>
-                    <option value="apa">Apa</option>
-                    <option value="anya">Anya</option>
-                    <option value="manoka">Manó</option>
-                  </select></td>
-                <td>Fórumba rumba.</td>
-            </tr>
+        <th><a href="Bannoltak.html">Bannoltak</a></th>
 
-        </table>
-        <button onmouseout="onoutmouse()" onmouseover="overmouse()" onclick="myFunction()">Click me</button>
+        <th><a href="Fórum.html">Fórum</a></th>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Itt a jelentkezés.</td>
+        <td>Itt a GYIK</td>
+        <td><select id="banned" name="banned">
+            <option value="pista">Pista</option>
+            <option value="andris">Andris</option>
+            <option value="apa">Apa</option>
+            <option value="anya">Anya</option>
+            <option value="manoka">Manó</option>
+          </select></td>
+        <td>Fórumba rumba.</td>
+      </tr>
 
-    </div>
+    </table>
+
+
+  </div>
+  <div style="padding:15px 15px 2500px;font-size:30px">
+    <button onmouseout="onoutmouse()" onmouseover="overmouse()" onclick="myFunction()">Click me</button>
     <p id="demo"> iddemo </p>
     <p id="selval"> selval </p>
-    <div>
-        <script>
-          var global_checked = true; // Globális változó
-            function myFunction() {
-//              document.getElementById("demo").innerHTML = "onClick";
-              var val = document.getElementById("banned").value;
-              document.getElementById("selval").innerHTML = val;
-              if (global_checked)
-              {
-                global_checked = false;
-                document.getElementById("demo").innerHTML = "CheckOn";
-              } else
-              {
-                global_checked = true;
-                document.getElementById("demo").innerHTML = "CheckOff";
-              }
-            }
-            function overmouse() {
-                var Selected = document.getElementById("banned").nodeValue;
-              document.getElementById("demo").innerHTML = "onmouseover";
-            }
-            function onoutmouse() {
-                var Selected = document.getElementById("banned").nodeValue;
-              document.getElementById("demo").innerHTML = "onmouseout";
-            }
-            </script>
+  </div>
+  <div>
+    <script>
+      window.onscroll = function () { scrollFunction() };
+      var global_checked = true; // Globális változó
+      function myFunction() {
+        //              document.getElementById("demo").innerHTML = "onClick";
+        var val = document.getElementById("banned").value;
+        document.getElementById("selval").innerHTML = val;
+        if (global_checked) {
+          global_checked = false;
+          document.getElementById("demo").innerHTML = "CheckOn";
+        } else {
+          global_checked = true;
+          document.getElementById("demo").innerHTML = "CheckOff";
+        }
+      }
+      function overmouse() {
+        var Selected = document.getElementById("banned").nodeValue;
+        document.getElementById("demo").innerHTML = "onmouseover";
+      }
+      function onoutmouse() {
+        var Selected = document.getElementById("banned").nodeValue;
+        document.getElementById("demo").innerHTML = "onmouseout";
+      }
+      function scrollFunction() {
+
+        if (document.body.scrollTop > 20) {
+
+        }
+
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("navbar").style.top = "0";
+        } else {
+          document.getElementById("navbar").style.top = "-150px";
+        }
+      }
+    </script>
     <P>
-   
+
 
     </P>
-</div>
-<div class="myDiv">
+  </div>
+  <div class="myDiv">
     <h2>This is a heading in a div element</h2>
     <p>This is some text in a div element.</p>
   </div>
