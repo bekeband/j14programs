@@ -46,11 +46,20 @@
     <p id="selval"> selval </p>
     <div>
         <script>
-
+          var global_checked = true; // Globális változó
             function myFunction() {
-              document.getElementById("demo").innerHTML = "onClick";
+//              document.getElementById("demo").innerHTML = "onClick";
               var val = document.getElementById("banned").value;
               document.getElementById("selval").innerHTML = val;
+              if (global_checked)
+              {
+                global_checked = false;
+                document.getElementById("demo").innerHTML = "CheckOn";
+              } else
+              {
+                global_checked = true;
+                document.getElementById("demo").innerHTML = "CheckOff";
+              }
             }
             function overmouse() {
                 var Selected = document.getElementById("banned").nodeValue;
