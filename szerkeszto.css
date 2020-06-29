@@ -41,11 +41,11 @@ body {margin:0;}
 
 }
 #navbar {
-    background-color: #333; /* Black background color */
-    position: fixed; /* Make it stick/fixed */
+    background-color: #cde1e6; /* Black background color */
+    position: fixed;  /*Make it stick/fixed */
     top: -50px; /* Hide the navbar 50 px outside of the top view */
     width: 100%; /* Full width */
-    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+    transition: top 0.8s; /* Transition effect when sliding down (and up) */
   }
 /* Style the navbar links */
 #navbar a {

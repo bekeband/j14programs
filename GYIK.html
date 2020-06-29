@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <p id="debug"> </p>
+    <p id="result"> </p>
+    <br>
+    <p>Összes igen válasz száma: </p>
+    <p id="yescount"></p> <br>
+    <button onclick="sendfunction()">Elküld</button>
+    <script>
+        let msgs = ["első", "második", "harmadik", "negyedik"];
+        let ids = ["elso", "masodik", "harmadik", "negyedik"];
+        let responses = ["", "", "", ""];
+        let good_responses = [];
+        for (i = 0; i < msgs.length; i++)
+        {
+            document.getElementById("debug").innerHTML += msgs[i] + " : ";
+            document.getElementById("debug").innerHTML += "<select name=" + ids[i] + " id=" + ids[i] + ">\
+            <option value=\"igen\">Igen</option>\
+            <option value=\"nem\">Nem</option>\
+            </select> <br> <br>";
+        }
+
+        function sendfunction() {
+            var yescount = 0;
+            document.getElementById("result").innerHTML = "";
+            for (i = 0; i < msgs.length; i++)
+            {
+                let value = document.getElementById(ids[i]).value;
+                if (value == "igen") yescount++;
+                document.getElementById("result").innerHTML += value;
+            }
+            document.getElementById("yescount").innerHTML = yescount;
+        }
+
+
+    </script>
 </body>
+
 </html>
