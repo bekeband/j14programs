@@ -15,6 +15,9 @@
     <p id="yescount"></p> <br>
     <button onclick="sendfunction()">Elküld</button>
     <br><br>
+
+<!-- Hat radio buton azonos névvel, így csak egyet lehet kiválasztani. -->
+
     <input type="radio" name="testradio" id="id01"> Igen </input>
     <input type="radio" name="testradio" id="id02"> Nem </input><br>
     <input type="radio" name="testradio" id="id03"> Igen </input>
@@ -39,18 +42,29 @@
             <option value=\"nem\">Nem</option>\
             </select> <br> <br>";
         }
+/*
+        A Radio buttonok lekezelése. A try - catch rész egyáltalán nem fontos, csak azért próbáltam, hogy a hibákat ki tudjam írni.
+        Ki is sezdtem belőle.
+*/
+
         function radiofunction() {
             //            document.getElementById("debugger").innerHTML = "debug";
-            try {
+//            try {   // nem fontos a try
+    /*          Az x-be a hat radio button objektuma, mint egy tömbbe. Azért elements többes szám, mert nem egy objektum 
+                kerük ki. */
                 var x = document.getElementsByName("testradio");
+                /* Az i végigfut (iterál) a tömb összes elemén.*/
                 for (i = 0; i < x.length; i++)
                 {
+                    /* és kiírja a checked értékét. false - vagy true*/
                     document.getElementById("debugger").innerHTML += x[i].checked + ",";
+                    /* A lista a 6 radiobutton bejelöltségét írja ki, ne zavarjon, hogy igen nem a felirat. Egyszerűen csak az lesz 
+                    true, amelyik be van x-szelve. Csak egy lehet, mert a nevük közös.*/
                 }
 
-            } catch (err) {
-                document.getElementById("debugger").innerHTML = err;
-            }
+//            } catch (err) {
+//                document.getElementById("debugger").innerHTML = err;
+//            }
             if (document.getElementById("id01").checked) {
                 document.getElementById("btnval1").innerHTML = "Igen nyomva = ";
             }
