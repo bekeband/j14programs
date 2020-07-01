@@ -27,7 +27,8 @@
         let ids = ["elso", "masodik", "harmadik", "negyedik"];
         let responses = ["", "", "", ""];
         let good_responses = [];
-        for (i = 0; i < msgs.length; i++) {
+        for (i = 0; i < msgs.length; i++)
+        {
             document.getElementById("debug").innerHTML += msgs[i] + " : ";
             document.getElementById("debug").innerHTML += "<select name=" + ids[i] + " id=" + ids[i] + ">\
             <option value=\"igen\">Igen</option>\
