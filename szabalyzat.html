@@ -1,11 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <p id="debug"> </p>
+    <p id="result"> </p>
+    <br>
+    <p>Összes igen válasz száma: </p>
+    <p id="yescount"></p> <br>
+    <p id="inemval"></p> <br>
+
+    <button onclick="sendfunction()">Elküld</button>
+    <button onclick="checkfunction()">Ellenőrzés</button>
+
+    <p>Válassz igen, vagy nem:</p>
+    <input id="igennem" type="radio" name="igennem" value="igen"> Igen<br>
+    <input id="igenne" type="radio" name="igennem" value="nem"> Nem<br>
+    <p></p>
+
+    <br>
+    <script>
+        document.getElementById("inemval").innerHTML = "11";
+
+        let msgs = ["első", "második", "harmadik", "negyedik"];
+        let ids = ["elso", "masodik", "harmadik", "negyedik"];
+        let responses = ["", "", "", ""];
+        let good_responses = [];
+        for (i = 0; i < msgs.length; i++) {
+            document.getElementById("debug").innerHTML += msgs[i] + " : ";
+            document.getElementById("debug").innerHTML += "<select name=" + ids[i] + " id=" + ids[i] + ">\
+            <option value=\"igen\">Igen</option>\
+            <option value=\"nem\">Nem</option>\
+            </select> <br> <br>";
+        }
+
+        function checkfunction() {
+            var nl = document.getElementsByName("igennem");
+            document.getElementById("inemval").innerHTML += nl.values[0];
+        };
+
+        function sendfunction() {
+            var yescount = 0;
+            document.getElementById("result").innerHTML = "";
+            for (i = 0; i < msgs.length; i++) {
+                let value = document.getElementById(ids[i]).value;
+                if (value == "igen") yescount++;
+                document.getElementById("result").innerHTML += value;
+            }
+            document.getElementById("yescount").innerHTML = yescount;
+        }
+
+
+    </script>
 </body>
+
 </html>

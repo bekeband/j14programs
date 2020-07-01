@@ -154,7 +154,8 @@
 
     </p>
 
-    <p id="debugger"></p>
+    <p id="debugger"></p><br>
+    <p id="result"></p><br>
 
     <script>
 
@@ -231,6 +232,12 @@
                 var össz = parseInt(Igen3) + parseInt(nemez3) + parseInt(tuti3) + parseInt(modon3) + 
                     parseInt(pucadek3) + parseInt(nemtom3) + parseInt(admin3) + parseInt(szolad3) + parseInt(szám);
                 document.getElementById("h1").innerHTML = össz;
+
+                if (össz > 8) {
+                    document.getElementById("result").innerHTML = "Elfogadva.";
+                } else {
+                    document.getElementById("result").innerHTML = "Nem jutottál be.";
+                }
 
             } catch (cerr) {
                 document.getElementById("debugger").innerHTML = err;
