@@ -311,9 +311,7 @@
         window.onscroll = function () { scrollFunction() };
 
         function scrollFunction() {
-            /*  Ez már jó, kíírja a debugger mezőbe a szöveget.*/
-            document.getElementById("debugger").innerHTML = "scrollFunction() {";
-            /* de itt még valami baj van, az, hogy felül a header táblánál az id="lista" .*/ 
+
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 document.getElementById("lista").style.height = "50px";
             } else {
