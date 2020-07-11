@@ -5,248 +5,332 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jelentkezés</title>
+    <style>
+        h5 {
+            text-align: center;
+            color: red;
+        }
+
+        p {
+            text-align: center;
+            color: red;
+            margin-top: 60px;
+
+        }
+
+
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            right: 0;
+            height: 70px;
+
+        }
+
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 10px 40px 40px 10px;
+            text-decoration: none;
+            border-right: 1px solid #bbb;
+            margin: 0px;
+            float: left;
+
+
+        }
+    </style>
 
 
 </head>
 
-<body style="text-align: center;color: red; ">
-    <p style=>
-        Pucadék rp Jelentkezés
-    </p>
-    <p>
-        Kötelező a /do, /me használata?
-    </p>
-    <h5>Igen</h5>
-    <input type="radio" name="Igen" id="/do1" value="1">
-    <h5> Nem </h5>
-    <input type="radio" name="Igen" id="/do2" value="0">
-    <h5>Csak akkor igen, ha egy admin engedélyt adott rá.</h5>
-    <input type="radio" name="Igen" id="/do3" value="0">
-
-    <p>
-        Hogyan/Hány féle módon tudsz támogatni minket?
-    </p>
-    <h5>
-        1 féle módon
-    </h5>
-    <input type="radio" name="modon" id="/do4" value="0">
-
-    <h5>3 féle módon</h5>
-    <input type="radio" name="modon" id="/do5" value="0">
-
-    <h5>
-        legalább 5 féle módon
-    </h5>
-    <input type="radio" name="modon" id="/do6" value="1">
-
-    <p>
-        Melyik a világ legjobb RP szervere?
-    </p>
-    <h5>
-        A Pucadék rp
-    </h5>
-    <input type="radio" name="nem ez" id="/do8" value="1">
-    <h5>
-        Hát tuti, hogy nem ez
-    </h5>
-    <input type="radio" name="nem ez" id="/do9" value="0">
-    <h5>
-        Na jóvan...
-    </h5>
-    <input type="radio" name="nem ez" id="/do10" value="0">
-    <p>
-        Melyik szerver a Nonrp mekkája?
-    </p>
-    <h5>
-        A Pucadék rp
-    </h5>
-    <input type="radio" name="pucadék" id="/do11" value="0">
-    <h5>
-        Tetya rp
-    </h5>
-    <input type="radio" name="pucadék" id="/do12" value="1">
-    <h5>
-        Red light rp
-    </h5>
-    <input type="radio" name="pucadék" id="/do13" value="0">
-    <p>
-        Kik a pucadék rp tulajdonosai?
-    </p>
-    <h5>
-        Nem tom
-    </h5>
-    <input type="radio" name="nem tom" id="/do14" value="1">
-    <h5>
-        Hát azt nem tom, de biztos nem normálisak
-    </h5>
-    <input type="radio" name="nem tom" id="/do15" value="0">
-    <p>
-        Mit csinálsz, ha egy játékos nem tud beszélni?
-    </p>
-    <h5>
-        Szólok adminnak
-    </h5>
-    <input type="radio" name="admin" id="/do16" value="0">
-    <h5>
-        Kilépek, majd rákeresek fórumon, hogy mitől lehet ez
-    </h5>
-    <input type="radio" name="admin" id="/do17" value="1">
-    <p>
-        Hol találtál rá a szerverre?
-    </p>
-    <input type="text" name="szerver" id="/do18">
-    <p>
-        Ez egy valós szerver?
-    </p>
-    <h5>
-        Igen
-    </h5>
-    <input type="radio" name="tuti" id="/do19" value="1">
-    <h5>
-        Tuti nem
-    </h5>
-    <input type="radio" name="tuti" id="/do20" value="0">
-    <h5>
-        Nem merem megnyomni a nemet, mert elolvastam a szabályzatot
-    </h5>
-    <input type="radio" name="tuti" id="/do21" value="0">
-    <p>
-        Meglátsz egy szabálytalanul közlekedő játékost. Mit teszel?
-    </p>
-    <h5>
-        Szólok adminnak
-    </h5>
-    <input type="radio" name="szolad" id="/do22" value="0">
-    <h5>
-        Szólok a rendőrségnek
-    </h5>
-    <input type="radio" name="szolad" id="/do23" value="0">
-    <h5>
-        Nem szólok, mert nem vagyok spicli
-    </h5>
-    <input type="radio" name="szolad" id="/do24" value="1">
-    <h5>
-        Beállok, mert én is kérek bannt
-    </h5>
-    <input type="radio" name="szolad" id="/do25" value="0">
-    <p>
-        Mennyi férőhelyes a 3. szerver?
-    </p>
-    <h5>
-        kb. 100
-    </h5>
-    <input type="radio" name="100" id="/do26" value="0">
-    <h5>
-        kb. 200
-    </h5>
-    <input type="radio" name="100" id="/do27" value="0">
-    <h5>
-        kb. 10000
-    </h5>
-    <input type="radio" name="100" id="/do28" value="1">
-
-    <p>
-        <button onclick="Bekuldes()">Beküldés</button>
-    </p>
-    <p id="h1">Az adminokkal együtt elbíráljuk a jelentkezésedet. Maximum 7 napon belül megtudod, hogy elfogadtuk-e.
-        Ha nagyon rossz lett a lapod, akkor mi nem fogjuk elbírálni, hanem nem fogod tudni beküldeni.
+<body>
+    <header style="line-height: 60px;">
+        <table>
+            <ul id="lista">
+                <li><a href="GYIK">GYIK</a></li>
+                <li><a href="Elolap.html">Előlap</a></li>
+                <li><a href="Bannoltak.html">Bannoltak</a></li>
+                <li><a href="/Fórum.html">Fórum</a></li>
+            </ul>
 
 
-    </p>
+        </table>
+    </header>
 
-    <p id="debugger"></p><br>
-    <p id="result"></p><br>
+
+    <nav style="text-align: center;">
+        <p style="margin-top: 70px;">
+            Pucadék rp Jelentkezés
+        </p>
+        <p>
+            Kötelező a /do, /me használata?
+        </p>
+        <h5>Igen</h5>
+        <input type="radio" name="Igen" id="/do1" value="1">
+        <h5> Nem </h5>
+        <input type="radio" name="Igen" id="/do2" value="0">
+        <h5>Csak akkor igen, ha egy admin engedélyt adott rá.</h5>
+        <input type="radio" name="Igen" id="/do3" value="0">
+
+        <p>
+            Hogyan/Hány féle módon tudsz támogatni minket?
+        </p>
+        <h5>
+            1 féle módon
+        </h5>
+        <input type="radio" name="modon" id="/do4" value="0">
+
+        <h5>3 féle módon</h5>
+        <input type="radio" name="modon" id="/do5" value="0">
+
+        <h5>
+            legalább 5 féle módon
+        </h5>
+        <input type="radio" name="modon" id="/do6" value="1">
+
+        <p>
+            Melyik a világ legjobb RP szervere?
+        </p>
+        <h5>
+            A Pucadék rp
+        </h5>
+        <input type="radio" name="nem ez" id="/do8" value="1">
+        <h5>
+            Hát tuti, hogy nem ez
+        </h5>
+        <input type="radio" name="nem ez" id="/do9" value="0">
+        <h5>
+            Na jóvan...
+        </h5>
+        <input type="radio" name="nem ez" id="/do10" value="0">
+        <p>
+            Melyik szerver a Nonrp mekkája?
+        </p>
+        <h5>
+            A Pucadék rp
+        </h5>
+        <input type="radio" name="pucadék" id="/do11" value="0">
+        <h5>
+            Tetya rp
+        </h5>
+        <input type="radio" name="pucadék" id="/do12" value="1">
+        <h5>
+            Red light rp
+        </h5>
+        <input type="radio" name="pucadék" id="/do13" value="0">
+        <p>
+            Kik a pucadék rp tulajdonosai?
+        </p>
+        <h5>
+            Nem tom
+        </h5>
+        <input type="radio" name="nem tom" id="/do14" value="1">
+        <h5>
+            Hát azt nem tom, de biztos nem normálisak
+        </h5>
+        <input type="radio" name="nem tom" id="/do15" value="0">
+        <p>
+            Mit csinálsz, ha egy játékos nem tud beszélni?
+        </p>
+        <h5>
+            Szólok adminnak
+        </h5>
+        <input type="radio" name="admin" id="/do16" value="0">
+        <h5>
+            Kilépek, majd rákeresek fórumon, hogy mitől lehet ez
+        </h5>
+        <input type="radio" name="admin" id="/do17" value="1">
+        <p>
+            Hol találtál rá a szerverre?
+        </p>
+        <input type="text" name="szerver" id="/do18">
+        <p>
+            Ez egy valós szerver?
+        </p>
+        <h5>
+            Igen
+        </h5>
+        <input type="radio" name="tuti" id="/do19" value="1">
+        <h5>
+            Tuti nem
+        </h5>
+        <input type="radio" name="tuti" id="/do20" value="0">
+        <h5>
+            Nem merem megnyomni a nemet, mert elolvastam a szabályzatot
+        </h5>
+        <input type="radio" name="tuti" id="/do21" value="0">
+        <p>
+            Meglátsz egy szabálytalanul közlekedő játékost. Mit teszel?
+        </p>
+        <h5>
+            Szólok adminnak
+        </h5>
+        <input type="radio" name="szolad" id="/do22" value="0">
+        <h5>
+            Szólok a rendőrségnek
+        </h5>
+        <input type="radio" name="szolad" id="/do23" value="0">
+        <h5>
+            Nem szólok, mert nem vagyok spicli
+        </h5>
+        <input type="radio" name="szolad" id="/do24" value="1">
+        <h5>
+            Beállok, mert én is kérek bannt
+        </h5>
+        <input type="radio" name="szolad" id="/do25" value="0">
+        <p>
+            Mennyi férőhelyes a 3. szerver?
+        </p>
+        <h5>
+            kb. 100
+        </h5>
+        <input type="radio" name="100" id="/do26" value="0">
+        <h5>
+            kb. 200
+        </h5>
+        <input type="radio" name="100" id="/do27" value="0">
+        <h5>
+            kb. 10000
+        </h5>
+        <input type="radio" name="100" id="/do28" value="1">
+
+        <p>
+            <button onclick="Bekuldes()">Beküldés</button>
+        </p>
+        <p>
+            Ha elfogadtuk a jelentkezésed, akkor, majd fölül le fog jönni egy alert, hogy elfogadtuk a jelentkezésed, ha
+            nem
+            fogadtuk el, akkor, olyan alert fog jönni, hogy nem fogadtuk el.
+        </p>
+
+
+    </nav>
+
+
+    <p id="debugger"></p>
 
     <script>
 
         function Bekuldes() 
         {
 
-            try {
-
-                var Igen2 = document.getElementsByName("Igen");
-                var Igen3 = 0;
-
-                for (var i = 0; i < Igen2.length; i++) {
-                    if (Igen2[i].checked)
-                        Igen3 = Igen2[i].value;
-                }
-
-                var modon2 = document.getElementsByName("modon");
-                var modon3 = 0;
-
-                for (var i = 0; i < modon2.length; i++) {
-                    if (modon2[i].checked)
-                        modon3 = modon2[i].value;
-                }
-
-                var nemez2 = document.getElementsByName("nem ez");
-                var nemez3 = 0;
-                for (var i = 0; i < nemez2.length; i++) {
-                    if (nemez2[i].checked)
-                        nemez3 = nemez2[i].value;
-                }
-
-                var pucadek2 = document.getElementsByName("pucadék");
-                var pucadek3 = 0;
-                for (var i = 0; i < pucadek2.length; i++) {
-                    if (pucadek2[i].checked)
-                        pucadek3 = pucadek2[i].value;
-                }
-
-                var nemtom2 = document.getElementsByName("nem tom");
-                var nemtom3 = 0;
-                for (var i = 0; i < nemtom2.length; i++) {
-                    if (nemtom2[i].checked)
-                        nemtom3 = nemtom2[i].value;
-                }
-
-                var admin2 = document.getElementsByName("admin");
-                var admin3 = 0;
-                for (var i = 0; i < admin2.length; i++) {
-                    if (admin2[i].checked)
-                        admin3 = admin2[i].value;
-                }
-
-                var tuti2 = document.getElementsByName("tuti");
-                var tuti3 = 0;
-                for (var i = 0; i < tuti2.length; i++) {
-                    if (tuti2[i].checked)
-                        tuti3 = tuti2[i].value;
-                }
-
-                var szolad2 = document.getElementsByName("szolad");
-                var szolad3 = 0;
-                for (var i = 0; i < szolad2.length; i++) {
-                    if (szolad2[i].checked)
-                        szolad3 = szolad2[i].value;
-                }
-
-                var szam = document.getElementsByName("100");
-                var szám = 0;
-                for (var i = 0; i < szam.length; i++) {
-                    if (szam[i].checked)
-                        szám = szam[i].value;
-                }
 
 
-                var össz = parseInt(Igen3) + parseInt(nemez3) + parseInt(tuti3) + parseInt(modon3) + 
-                    parseInt(pucadek3) + parseInt(nemtom3) + parseInt(admin3) + parseInt(szolad3) + parseInt(szám);
-                document.getElementById("h1").innerHTML = össz;
+            var Igen2 = document.getElementsByName("Igen");
+            var Igen3 = 0;
 
-                if (össz > 8) {
-                    document.getElementById("result").innerHTML = "Elfogadva.";
-                } else {
-                    document.getElementById("result").innerHTML = "Nem jutottál be.";
-                }
+            for (var i = 0; i < Igen2.length; i++) {
+                if (Igen2[i].checked)
+                    Igen3 = Igen2[i].value;
+            }
+<<<<<<< HEAD
+        }
 
-            } catch (cerr) {
-                document.getElementById("debugger").innerHTML = err;
+    </script>
+
+=======
+
+            var modon2 = document.getElementsByName("modon");
+            var modon3 = 0;
+
+            for (var i = 0; i < modon2.length; i++) {
+                if (modon2[i].checked)
+                    modon3 = modon2[i].value;
+            }
+
+            var nemez2 = document.getElementsByName("nem ez");
+            var nemez3 = 0;
+            for (var i = 0; i < nemez2.length; i++) {
+                if (nemez2[i].checked)
+                    nemez3 = nemez2[i].value;
+            }
+
+            var pucadek2 = document.getElementsByName("pucadék");
+            var pucadek3 = 0;
+            for (var i = 0; i < pucadek2.length; i++) {
+                if (pucadek2[i].checked)
+                    pucadek3 = pucadek2[i].value;
+            }
+
+            var nemtom2 = document.getElementsByName("nem tom");
+            var nemtom3 = 0;
+            for (var i = 0; i < nemtom2.length; i++) {
+                if (nemtom2[i].checked)
+                    nemtom3 = nemtom2[i].value;
+            }
+
+            var admin2 = document.getElementsByName("admin");
+            var admin3 = 0;
+            for (var i = 0; i < admin2.length; i++) {
+                if (admin2[i].checked)
+                    admin3 = admin2[i].value;
+            }
+
+            var tuti2 = document.getElementsByName("tuti");
+            var tuti3 = 0;
+            for (var i = 0; i < tuti2.length; i++) {
+                if (tuti2[i].checked)
+                    tuti3 = tuti2[i].value;
+            }
+
+            var szolad2 = document.getElementsByName("szolad");
+            var szolad3 = 0;
+            for (var i = 0; i < szolad2.length; i++) {
+                if (szolad2[i].checked)
+                    szolad3 = szolad2[i].value;
+            }
+
+            var szam = document.getElementsByName("100");
+            var szám = 0;
+            for (var i = 0; i < szam.length; i++) {
+                if (szam[i].checked)
+                    szám = szam[i].value;
+            }
+
+
+            var össz = parseInt(Igen3) + parseInt(nemez3) + parseInt(tuti3) + parseInt(modon3) +
+                parseInt(pucadek3) + parseInt(nemtom3) + parseInt(admin3) + parseInt(szolad3) + parseInt(szám);
+
+
+            if (össz > 8) {
+                alert("Elfogadtuk a jelentkezésed!");
+            } else {
+                alert("Nem fogadtuk el a jelentkezésed! Olvasd át jobban a szabályzatot!");
+            }
+            var le = 0;
+            document.body.scrollTop = le;
+            /* Ez a return utasítás, ez után már nem hívódik meg semmi az alprogramban.*/
+            return -Math.abs(le);
+
+            /* Itt volt a régi scroll function, ami csak akkor hívódott meg, ha a Beküldés gombot már egyszer meghívták.*/
+
+        }
+        /* Kikerült a funkció a főágba.*/
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            /*  Ez már jó, kíírja a debugger mezőbe a szöveget.*/
+            document.getElementById("debugger").innerHTML = "scrollFunction() {";
+            /* de itt még valami baj van, az, hogy felül a header táblánál az id="lista" .*/ 
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("lista").style.height = "50px";
+            } else {
+                document.getElementById("lista").style.height = "70px";
             }
         }
 
     </script>
 
+>>>>>>> 70fab6056fc409a46253684762206b0e7a4f40dc
 </body>
 
 </html>
