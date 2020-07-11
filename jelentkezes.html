@@ -232,105 +232,10 @@
                 if (Igen2[i].checked)
                     Igen3 = Igen2[i].value;
             }
-<<<<<<< HEAD
         }
 
     </script>
 
-=======
-
-            var modon2 = document.getElementsByName("modon");
-            var modon3 = 0;
-
-            for (var i = 0; i < modon2.length; i++) {
-                if (modon2[i].checked)
-                    modon3 = modon2[i].value;
-            }
-
-            var nemez2 = document.getElementsByName("nem ez");
-            var nemez3 = 0;
-            for (var i = 0; i < nemez2.length; i++) {
-                if (nemez2[i].checked)
-                    nemez3 = nemez2[i].value;
-            }
-
-            var pucadek2 = document.getElementsByName("pucadék");
-            var pucadek3 = 0;
-            for (var i = 0; i < pucadek2.length; i++) {
-                if (pucadek2[i].checked)
-                    pucadek3 = pucadek2[i].value;
-            }
-
-            var nemtom2 = document.getElementsByName("nem tom");
-            var nemtom3 = 0;
-            for (var i = 0; i < nemtom2.length; i++) {
-                if (nemtom2[i].checked)
-                    nemtom3 = nemtom2[i].value;
-            }
-
-            var admin2 = document.getElementsByName("admin");
-            var admin3 = 0;
-            for (var i = 0; i < admin2.length; i++) {
-                if (admin2[i].checked)
-                    admin3 = admin2[i].value;
-            }
-
-            var tuti2 = document.getElementsByName("tuti");
-            var tuti3 = 0;
-            for (var i = 0; i < tuti2.length; i++) {
-                if (tuti2[i].checked)
-                    tuti3 = tuti2[i].value;
-            }
-
-            var szolad2 = document.getElementsByName("szolad");
-            var szolad3 = 0;
-            for (var i = 0; i < szolad2.length; i++) {
-                if (szolad2[i].checked)
-                    szolad3 = szolad2[i].value;
-            }
-
-            var szam = document.getElementsByName("100");
-            var szám = 0;
-            for (var i = 0; i < szam.length; i++) {
-                if (szam[i].checked)
-                    szám = szam[i].value;
-            }
-
-
-            var össz = parseInt(Igen3) + parseInt(nemez3) + parseInt(tuti3) + parseInt(modon3) +
-                parseInt(pucadek3) + parseInt(nemtom3) + parseInt(admin3) + parseInt(szolad3) + parseInt(szám);
-
-
-            if (össz > 8) {
-                alert("Elfogadtuk a jelentkezésed!");
-            } else {
-                alert("Nem fogadtuk el a jelentkezésed! Olvasd át jobban a szabályzatot!");
-            }
-            var le = 0;
-            document.body.scrollTop = le;
-            /* Ez a return utasítás, ez után már nem hívódik meg semmi az alprogramban.*/
-            return -Math.abs(le);
-
-            /* Itt volt a régi scroll function, ami csak akkor hívódott meg, ha a Beküldés gombot már egyszer meghívták.*/
-
-        }
-        /* Kikerült a funkció a főágba.*/
-        window.onscroll = function () { scrollFunction() };
-
-        function scrollFunction() {
-            /*  Ez már jó, kíírja a debugger mezőbe a szöveget.*/
-            document.getElementById("debugger").innerHTML = "scrollFunction() {";
-            /* de itt még valami baj van, az, hogy felül a header táblánál az id="lista" .*/ 
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("lista").style.height = "50px";
-            } else {
-                document.getElementById("lista").style.height = "70px";
-            }
-        }
-
-    </script>
-
->>>>>>> 70fab6056fc409a46253684762206b0e7a4f40dc
 </body>
 
 </html>
